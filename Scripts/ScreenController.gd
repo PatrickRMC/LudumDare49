@@ -10,7 +10,7 @@ func _open_app(app):
 			$AppsPanels/GoglApp.visible = true
 		"Crypto":
 			$AppsPanels/CryptoApp.visible = true
-		"SellCrypto":
-			$AppsPanels/SellCryptoApp.visible = true
+		"ManageCrypto":
+			$AppsPanels/ManageCryptoApp.visible = true
 		"Store":
 			$AppsPanels/StoreApp.visible = true

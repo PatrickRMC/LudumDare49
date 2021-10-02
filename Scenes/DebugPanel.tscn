@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Debug.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Debug.gd" type="Script" id=1]
 
 [node name="DebugPanel" type="Control"]
 anchor_right = 1.0
@@ -50,6 +50,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="NewDayButton" type="Button" parent="Debug"]
+margin_left = 498.652
+margin_top = 46.0
+margin_right = 622.652
+margin_bottom = 66.0
+text = "simulate new day"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewEventButton" type="Button" parent="Debug"]
+margin_left = 496.129
+margin_top = 19.6818
+margin_right = 634.129
+margin_bottom = 39.6818
+text = "simulate new event"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Title" type="Label" parent="."]
 margin_left = 7.0
 margin_top = 9.0
@@ -60,3 +80,5 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="pressed" from="Debug/NewEventButton" to="." method="_on_NewEventButton_pressed"]

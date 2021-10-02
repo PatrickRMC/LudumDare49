@@ -7,6 +7,7 @@ var v_range = 5
 
 var amount_of_crypto = 5
 var ores = []
+var crypto_ores = []
 var is_active = false
 
 func _generate_world():
@@ -28,4 +29,9 @@ func _generate_world():
 		var x = rng.randi_range(0,ores.size()-1)
 		ores[x].is_crypto = true
 		ores[x].get_child(0).texture = cryptotext
+		crypto_ores.append(ores[x])
 		ores.erase(ores[x])
+
+func _delete_world():
+	for i in get_child_count():
+		get_child(i).queue_free()

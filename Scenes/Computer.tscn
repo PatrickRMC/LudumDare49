@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/DesktopScreen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Art/sketchpc.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/BalanceScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/BillsScreen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/EventScreen.tscn" type="PackedScene" id=5]
 
 [node name="Computer" type="Sprite"]
 position = Vector2( 325.276, 189.514 )
@@ -33,3 +34,9 @@ margin_left = -288.347
 margin_top = -64.1063
 margin_right = -815.347
 margin_bottom = -360.106
+
+[node name="EventScreen" parent="." instance=ExtResource( 5 )]
+margin_left = 13.5402
+margin_top = 63.565
+margin_right = 13.5402
+margin_bottom = 63.565

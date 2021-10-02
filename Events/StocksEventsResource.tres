@@ -1,0 +1,27 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Resource
+
+export(Array, String) var companies
+export(Array, String) var event
+export(Array, String) var positive_responses
+export(Array, String) var negative_responses
+enum PUBLIC_REACTION { neutral, positive, negative }
+export(PUBLIC_REACTION) var public_reaction
+
+func _init(p_companies = [], p_event = [], p_positive_responses = [], p_negative_responses = [], p_public_reaction = PUBLIC_REACTION.neutral):
+	companies = p_companies
+	event = p_event
+	positive_responses = p_positive_responses
+	negative_responses = p_negative_responses
+	public_reaction = p_public_reaction
+"
+
+[resource]
+script = SubResource( 1 )
+companies = [ "Desla", "Pear", "Mokia", "Macrosoft", "Lightswitch" ]
+event = [ "released a new product", "hosted a big event", "tweeted something important" ]
+positive_responses = [ "The public is very happy about this", "The public has been pleased." ]
+negative_responses = [ "The public is not happy about this.", "The public is dissappointed with this." ]
+public_reaction = 0

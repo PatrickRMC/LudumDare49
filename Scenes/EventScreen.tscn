@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Art/placeholderlogo.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/EventScreen.gd" type="Script" id=2]
+[ext_resource path="res://Events/StocksEventsResource.tres" type="Resource" id=3]
+
+[node name="EventScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -532.0
+margin_bottom = -321.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+event_resource = ExtResource( 3 )
+
+[node name="Panel" type="ColorRect" parent="."]
+margin_right = 109.0
+margin_bottom = 39.0
+color = Color( 0.556863, 0.556863, 0.556863, 1 )
+
+[node name="CompanyLabel" type="Label" parent="Panel"]
+margin_left = 40.0
+margin_top = 6.0
+margin_right = 208.0
+margin_bottom = 22.0
+rect_scale = Vector2( 0.398, 0.349 )
+text = "apple corproratioatf"
+autowrap = true
+clip_text = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EventLabel" type="Label" parent="Panel"]
+margin_left = 40.0
+margin_top = 14.0
+margin_right = 208.0
+margin_bottom = 80.0
+rect_scale = Vector2( 0.398, 0.349 )
+text = "apple has just shit their pants live on television. The public is very happy about this"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 35.0
+margin_bottom = 35.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

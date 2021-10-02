@@ -6,6 +6,7 @@ var session_crypto = 0
 func _start_game():
 	get_parent().find_node("StartScreen").visible = false
 	active = true
+	$OreSpawner.crypto_ores = []
 	$OreSpawner._generate_world()
 	$CryptoMiner.position = Vector2(-56,-24)
 	session_crypto = 0
@@ -21,3 +22,5 @@ func _end_game():
 	Globals.crypto_count += session_crypto
 	$CryptoMiner.position = Vector2(-56,-24)
 	$OreSpawner.ores = []
+	$OreSpawner._delete_world()
+	$OreSpawner.crypto_ores = []

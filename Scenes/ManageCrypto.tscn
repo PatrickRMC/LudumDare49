@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Art/sellcryptobuttonselected.png" type="Texture" id=2]
+[ext_resource path="res://Art/buycryptobutton.png" type="Texture" id=3]
+[ext_resource path="res://Art/sellcryptobutton.png" type="Texture" id=4]
+[ext_resource path="res://Art/buycryptobuttonhover.png" type="Texture" id=5]
+[ext_resource path="res://Art/sellcryptobuttonhover.png" type="Texture" id=6]
+[ext_resource path="res://Art/buycryptobuttonselected.png" type="Texture" id=7]
+[ext_resource path="res://Art/sellcryptobg.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/ManageCrypto.gd" type="Script" id=9]
+
+[node name="ManageCrypto" type="TextureRect"]
+self_modulate = Color( 0.113725, 0.113725, 0.113725, 1 )
+margin_left = 25.4712
+margin_top = 19.3489
+margin_right = 169.471
+margin_bottom = 83.3489
+texture = ExtResource( 8 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SellCryptoBtn" type="TextureButton" parent="."]
+margin_left = 96.7471
+margin_top = 67.0
+margin_right = 144.747
+margin_bottom = 83.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 6 )
+
+[node name="BuyCryptoBtn" type="TextureButton" parent="."]
+margin_top = 67.0
+margin_right = 40.0
+margin_bottom = 82.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 7 )
+texture_hover = ExtResource( 5 )
+
+[node name="CryptoWorthLabel" type="Label" parent="."]
+margin_left = 5.70933
+margin_top = 24.9484
+margin_right = 137.709
+margin_bottom = 38.9484
+text = "Crypto Worth: 50000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="SellCryptoBtn" to="." method="_sell_crypto"]
+[connection signal="pressed" from="BuyCryptoBtn" to="." method="_buy_crypto"]

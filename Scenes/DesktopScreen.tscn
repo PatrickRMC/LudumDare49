@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Art/cryptoicon.png" type="Texture" id=1]
 [ext_resource path="res://Art/cryptoiconselected.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Art/cryptoselliconselected.png" type="Texture" id=13]
 [ext_resource path="res://Art/cryptosellicon.png" type="Texture" id=14]
 [ext_resource path="res://Art/cryptoselliconhover.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/ManageCryptoApp.tscn" type="PackedScene" id=16]
 
 [node name="DesktopScreen" type="Control"]
 anchor_right = 1.0
@@ -67,7 +68,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SellCryptoBtn" type="TextureButton" parent="Desktop/DesktopAppsBtns"]
+[node name="ManageCryptoBtn" type="TextureButton" parent="Desktop/DesktopAppsBtns"]
 margin_left = 110.0
 margin_right = 144.0
 margin_bottom = 32.0
@@ -78,12 +79,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SellCryptoLabel" type="Label" parent="Desktop/DesktopAppsBtns"]
+[node name="ManageCryptoLabel" type="Label" parent="Desktop/DesktopAppsBtns"]
 margin_left = 86.3462
 margin_top = 36.0
 margin_right = 163.346
 margin_bottom = 50.0
-text = "Sell Crypto"
+text = "Manage Crypto"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -136,11 +137,22 @@ __meta__ = {
 
 [node name="GoglApp" parent="AppsPanels" instance=ExtResource( 8 )]
 visible = false
+margin_left = -99.3313
+margin_top = -68.9028
+margin_right = -547.331
+margin_bottom = -300.903
 
 [node name="CryptoApp" parent="AppsPanels" instance=ExtResource( 9 )]
 visible = false
+margin_left = -99.3313
+margin_top = -68.9028
+margin_right = -547.331
+margin_bottom = -300.903
+
+[node name="ManageCryptoApp" parent="AppsPanels" instance=ExtResource( 16 )]
+visible = false
 
 [connection signal="pressed" from="Desktop/DesktopAppsBtns/CryptoBtn" to="." method="_open_app" binds= [ "Crypto" ]]
-[connection signal="pressed" from="Desktop/DesktopAppsBtns/SellCryptoBtn" to="." method="_open_app" binds= [ "Crypto" ]]
+[connection signal="pressed" from="Desktop/DesktopAppsBtns/ManageCryptoBtn" to="." method="_open_app" binds= [ "ManageCrypto" ]]
 [connection signal="pressed" from="Desktop/DesktopAppsBtns/GogleBtn" to="." method="_open_app" binds= [ "Gogl" ]]
 [connection signal="pressed" from="Desktop/DesktopAppsBtns/ShopBtn" to="." method="_open_app" binds= [ "Store" ]]
