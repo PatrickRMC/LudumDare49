@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Art/cryptoicon.png" type="Texture" id=1]
 [ext_resource path="res://Art/cryptoiconselected.png" type="Texture" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://Art/stockslogo.png" type="Texture" id=18]
 [ext_resource path="res://Art/stocksselected.png" type="Texture" id=19]
 [ext_resource path="res://Art/stockshover.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/MainFont.tres" type="DynamicFont" id=21]
 
 [node name="DesktopScreen" type="Control"]
 anchor_right = 1.0
@@ -66,6 +67,7 @@ __meta__ = {
 margin_top = 36.0
 margin_right = 77.0
 margin_bottom = 50.0
+custom_fonts/font = ExtResource( 21 )
 text = "Mine Crypto"
 align = 1
 __meta__ = {
@@ -88,6 +90,7 @@ margin_left = 86.3462
 margin_top = 36.0
 margin_right = 163.346
 margin_bottom = 50.0
+custom_fonts/font = ExtResource( 21 )
 text = "Manage Crypto"
 align = 1
 __meta__ = {
@@ -107,6 +110,7 @@ texture_hover = ExtResource( 5 )
 margin_top = 90.0
 margin_right = 77.0
 margin_bottom = 104.0
+custom_fonts/font = ExtResource( 21 )
 text = "Gogl"
 align = 1
 __meta__ = {
@@ -126,6 +130,7 @@ texture_hover = ExtResource( 10 )
 margin_top = 144.0
 margin_right = 77.0
 margin_bottom = 158.0
+custom_fonts/font = ExtResource( 21 )
 text = "Store"
 align = 1
 __meta__ = {
@@ -146,6 +151,7 @@ margin_left = 86.3462
 margin_top = 90.0
 margin_right = 163.346
 margin_bottom = 104.0
+custom_fonts/font = ExtResource( 21 )
 text = "Stocks"
 align = 1
 __meta__ = {

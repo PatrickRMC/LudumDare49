@@ -13,9 +13,9 @@ texture = ExtResource( 2 )
 [node name="DesktopScreen" parent="." instance=ExtResource( 1 )]
 show_behind_parent = true
 margin_left = -14.6101
-margin_top = 27.8926
+margin_top = 27.2252
 margin_right = -654.61
-margin_bottom = -332.107
+margin_bottom = -332.774
 
 [node name="BalanceScreen" parent="." instance=ExtResource( 3 )]
 show_behind_parent = true
@@ -40,3 +40,31 @@ margin_left = 13.5402
 margin_top = 63.565
 margin_right = 13.5402
 margin_bottom = 63.565
+
+[node name="CalenderScreen" type="Control" parent="."]
+show_behind_parent = true
+margin_left = -176.0
+margin_top = -146.0
+margin_right = -87.0
+margin_bottom = -83.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Panel" parent="CalenderScreen"]
+margin_left = 0.374573
+margin_top = 1.72545
+margin_right = 89.3746
+margin_bottom = 61.7255
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Day" type="Panel" parent="CalenderScreen"]
+margin_left = 2.0
+margin_top = -21.0
+margin_right = 47.0
+margin_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
