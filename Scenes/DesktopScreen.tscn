@@ -1,0 +1,146 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Art/cryptoicon.png" type="Texture" id=1]
+[ext_resource path="res://Art/cryptoiconselected.png" type="Texture" id=2]
+[ext_resource path="res://Art/cryptohover.png" type="Texture" id=3]
+[ext_resource path="res://Art/gogleicon.png" type="Texture" id=4]
+[ext_resource path="res://Art/goglehover.png" type="Texture" id=5]
+[ext_resource path="res://Art/gogleselected.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/ScreenController.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/GoglApp.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/CryptoApp.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Art/shopiconhover.png" type="Texture" id=10]
+[ext_resource path="res://Art/shopiconselected.png" type="Texture" id=11]
+[ext_resource path="res://Art/shopicon.png" type="Texture" id=12]
+[ext_resource path="res://Art/cryptoselliconselected.png" type="Texture" id=13]
+[ext_resource path="res://Art/cryptosellicon.png" type="Texture" id=14]
+[ext_resource path="res://Art/cryptoselliconhover.png" type="Texture" id=15]
+
+[node name="DesktopScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1024.0
+margin_bottom = -600.0
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Desktop" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -140.0
+margin_top = -88.0
+margin_right = 139.0
+margin_bottom = 87.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DesktopAppsBtns" type="Control" parent="Desktop"]
+anchor_right = 0.246
+margin_left = 11.0
+margin_top = 9.0
+margin_right = 19.366
+margin_bottom = 167.0
+
+[node name="CryptoBtn" type="TextureButton" parent="Desktop/DesktopAppsBtns"]
+margin_left = 24.0
+margin_right = 56.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CryptoLabel" type="Label" parent="Desktop/DesktopAppsBtns"]
+margin_top = 36.0
+margin_right = 77.0
+margin_bottom = 50.0
+text = "Mine Crypto"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SellCryptoBtn" type="TextureButton" parent="Desktop/DesktopAppsBtns"]
+margin_left = 110.0
+margin_right = 144.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+texture_hover = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SellCryptoLabel" type="Label" parent="Desktop/DesktopAppsBtns"]
+margin_left = 86.3462
+margin_top = 36.0
+margin_right = 163.346
+margin_bottom = 50.0
+text = "Sell Crypto"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GogleBtn" type="TextureButton" parent="Desktop/DesktopAppsBtns"]
+margin_left = 24.0
+margin_top = 54.0
+margin_right = 56.0
+margin_bottom = 86.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+
+[node name="GogleLabel" type="Label" parent="Desktop/DesktopAppsBtns"]
+margin_top = 90.0
+margin_right = 77.0
+margin_bottom = 104.0
+text = "Gogl"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopBtn" type="TextureButton" parent="Desktop/DesktopAppsBtns"]
+margin_left = 24.0
+margin_top = 108.0
+margin_right = 56.0
+margin_bottom = 140.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 10 )
+
+[node name="ShopLabel" type="Label" parent="Desktop/DesktopAppsBtns"]
+margin_top = 144.0
+margin_right = 77.0
+margin_bottom = 158.0
+text = "Store"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AppsPanels" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GoglApp" parent="AppsPanels" instance=ExtResource( 8 )]
+visible = false
+
+[node name="CryptoApp" parent="AppsPanels" instance=ExtResource( 9 )]
+visible = false
+
+[connection signal="pressed" from="Desktop/DesktopAppsBtns/CryptoBtn" to="." method="_open_app" binds= [ "Crypto" ]]
+[connection signal="pressed" from="Desktop/DesktopAppsBtns/SellCryptoBtn" to="." method="_open_app" binds= [ "Crypto" ]]
+[connection signal="pressed" from="Desktop/DesktopAppsBtns/GogleBtn" to="." method="_open_app" binds= [ "Gogl" ]]
+[connection signal="pressed" from="Desktop/DesktopAppsBtns/ShopBtn" to="." method="_open_app" binds= [ "Store" ]]

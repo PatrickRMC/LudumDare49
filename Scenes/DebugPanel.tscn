@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Debug.gd" type="Script" id=1]
+
+[node name="DebugPanel" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -4.0
+margin_bottom = -317.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Debug" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.454902 )
+margin_right = 639.0
+margin_bottom = 73.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CryptoLabel" type="Label" parent="Debug"]
+margin_left = 7.0
+margin_top = 18.0
+margin_right = 154.0
+margin_bottom = 32.0
+text = "GLOBALS.XXXXX ="
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BalanceLabel" type="Label" parent="Debug"]
+margin_left = 7.0
+margin_top = 32.0
+margin_right = 154.0
+margin_bottom = 46.0
+text = "GLOBALS.XXXXX ="
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BillsLabel" type="Label" parent="Debug"]
+margin_left = 7.0
+margin_top = 46.0
+margin_right = 154.0
+margin_bottom = 60.0
+text = "GLOBALS.XXXXX ="
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 9.0
+margin_right = 626.0
+margin_bottom = 23.0
+text = "Debug Panel"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

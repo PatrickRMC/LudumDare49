@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Art/cryptocharacter1.png" type="Texture" id=1]
 [ext_resource path="res://Art/cryptocharacter2.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/CryptoMiner.gd" type="Script" id=3]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -15,6 +16,7 @@ animations = [ {
 extents = Vector2( 8, 8 )
 
 [node name="CryptoMiner" type="KinematicBody2D"]
+script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
@@ -22,3 +24,8 @@ animation = "Mine"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )
+
+[node name="OreRay" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 0 )
+collision_mask = 2
