@@ -1,7 +1,5 @@
 extends Control
 
-
-
 func _open_app(app):
 	for i in $AppsPanels.get_child_count():
 		$AppsPanels.get_child(i).visible = false
@@ -14,3 +12,5 @@ func _open_app(app):
 			$AppsPanels/ManageCryptoApp.visible = true
 		"Store":
 			$AppsPanels/StoreApp.visible = true
+		"StocksApp":
+			$AppsPanels/StocksApp.visible = true

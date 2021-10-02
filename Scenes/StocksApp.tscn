@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/AppPanel.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Art/appbg.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/LightswitchStockCard.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/MacrosoftStockCard.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/PearStockCard.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/DeslaStockCard.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/MokiaStockCard.tscn" type="PackedScene" id=7]
+
+[node name="StocksApp" instance=ExtResource( 1 )]
+self_modulate = Color( 0.541176, 0.541176, 0.541176, 0.196078 )
+
+[node name="StocksPanel" type="TextureRect" parent="." index="0"]
+show_behind_parent = true
+margin_right = 192.0
+margin_bottom = 128.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="StocksPanel" index="0"]
+margin_right = 164.0
+margin_bottom = 125.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="GridContainer" parent="StocksPanel/ScrollContainer" index="0"]
+margin_right = 76.0
+margin_bottom = 200.0
+custom_constants/vseparation = 100
+custom_constants/hseparation = 76
+columns = 2
+
+[node name="DeslaStockCard" parent="StocksPanel/ScrollContainer/VBoxContainer" index="0" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="LightswitchStockCard" parent="StocksPanel/ScrollContainer/VBoxContainer" index="1" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 76.0
+margin_right = 76.0
+margin_bottom = 0.0
+
+[node name="MacrosoftStockCard" parent="StocksPanel/ScrollContainer/VBoxContainer" index="2" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 100.0
+margin_right = 0.0
+margin_bottom = 100.0
+
+[node name="MokiaStockCard" parent="StocksPanel/ScrollContainer/VBoxContainer" index="3" instance=ExtResource( 7 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 76.0
+margin_top = 100.0
+margin_right = 76.0
+margin_bottom = 100.0
+
+[node name="PearStockCard" parent="StocksPanel/ScrollContainer/VBoxContainer" index="4" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 200.0
+margin_right = 0.0
+margin_bottom = 200.0

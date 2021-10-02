@@ -42,3 +42,6 @@ func _new_event():
 	print(company + "old rating: " + str(Globals.company_rating[str(company)]) + " New rating: " + str(new_rating) + "\n")
 	
 	Globals.company_rating[str(company)] += rating_change
+	visible = true
+	yield(get_tree().create_timer(4),"timeout")
+	visible = false

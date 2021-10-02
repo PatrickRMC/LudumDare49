@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Art/cryptoicon.png" type="Texture" id=1]
 [ext_resource path="res://Art/cryptoiconselected.png" type="Texture" id=2]
@@ -16,6 +16,10 @@
 [ext_resource path="res://Art/cryptosellicon.png" type="Texture" id=14]
 [ext_resource path="res://Art/cryptoselliconhover.png" type="Texture" id=15]
 [ext_resource path="res://Scenes/ManageCryptoApp.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/StocksApp.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Art/stockslogo.png" type="Texture" id=18]
+[ext_resource path="res://Art/stocksselected.png" type="Texture" id=19]
+[ext_resource path="res://Art/stockshover.png" type="Texture" id=20]
 
 [node name="DesktopScreen" type="Control"]
 anchor_right = 1.0
@@ -128,6 +132,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="StocksBtn" type="TextureButton" parent="Desktop/DesktopAppsBtns"]
+margin_left = 110.346
+margin_top = 54.0
+margin_right = 142.346
+margin_bottom = 86.0
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 19 )
+texture_hover = ExtResource( 20 )
+
+[node name="StocksLabel" type="Label" parent="Desktop/DesktopAppsBtns"]
+margin_left = 86.3462
+margin_top = 90.0
+margin_right = 163.346
+margin_bottom = 104.0
+text = "Stocks"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="AppsPanels" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -152,7 +176,11 @@ margin_bottom = -300.903
 [node name="ManageCryptoApp" parent="AppsPanels" instance=ExtResource( 16 )]
 visible = false
 
+[node name="StocksApp" parent="AppsPanels" instance=ExtResource( 17 )]
+visible = false
+
 [connection signal="pressed" from="Desktop/DesktopAppsBtns/CryptoBtn" to="." method="_open_app" binds= [ "Crypto" ]]
 [connection signal="pressed" from="Desktop/DesktopAppsBtns/ManageCryptoBtn" to="." method="_open_app" binds= [ "ManageCrypto" ]]
 [connection signal="pressed" from="Desktop/DesktopAppsBtns/GogleBtn" to="." method="_open_app" binds= [ "Gogl" ]]
 [connection signal="pressed" from="Desktop/DesktopAppsBtns/ShopBtn" to="." method="_open_app" binds= [ "Store" ]]
+[connection signal="pressed" from="Desktop/DesktopAppsBtns/StocksBtn" to="." method="_open_app" binds= [ "StocksApp" ]]

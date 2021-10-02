@@ -17,4 +17,21 @@ var company_rating = {
 	"Lightswitch" : 2,
 }
 
+var stocks_qtn = {
+	"Desla" : 0, 
+	"Pear" : 0, 
+	"Mokia" : 0,
+	"Macrosoft" : 0,
+	"Lightswitch" : 0,
+}
+
+var company_worth = {
+	"Desla" : 3000, 
+	"Pear" : 3000, 
+	"Mokia" : 3000,
+	"Macrosoft" : 3000,
+	"Lightswitch" : 3000,
+}
+
+
 var event_manager
