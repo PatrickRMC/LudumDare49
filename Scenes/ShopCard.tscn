@@ -1,0 +1,85 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/MainFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Art/buycryptobuttonselected.png" type="Texture" id=2]
+[ext_resource path="res://Art/buycryptobutton.png" type="Texture" id=3]
+[ext_resource path="res://Art/buycryptobuttonhover.png" type="Texture" id=4]
+[ext_resource path="res://Art/bettermining.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/ShopCard.gd" type="Script" id=6]
+
+[node name="ShopCard" type="Panel"]
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 0.21024
+margin_top = -0.177597
+margin_right = 54.2102
+margin_bottom = 84.8224
+color = Color( 0.196078, 0.192157, 0.254902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheapMiningBtn" type="TextureButton" parent="."]
+margin_left = 3.0
+margin_top = 66.235
+margin_right = 51.0
+margin_bottom = 82.235
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 3.21024
+margin_top = 3.47157
+margin_right = 51.2102
+margin_bottom = 35.4716
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 3.0
+margin_top = 38.0
+margin_right = 96.0
+margin_bottom = 47.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 1, 0.0666667, 1 )
+text = "+ Less mining bills"
+autowrap = true
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 3.0
+margin_top = 46.0
+margin_right = 102.0
+margin_bottom = 55.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0.247059, 0.247059, 1 )
+text = "- More power usage"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 3.0
+margin_top = 58.1039
+margin_right = 102.0
+margin_bottom = 67.1039
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Cost: 15000"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

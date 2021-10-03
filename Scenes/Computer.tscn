@@ -1,70 +1,126 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/DesktopScreen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Art/sketchpc.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/BalanceScreen.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/BillsScreen.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/EventScreen.tscn" type="PackedScene" id=5]
+[ext_resource path="res://CalenderScreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Computer.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/SummaryPanel.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/DisasterScreen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Art/ad1.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/AdsScreen.gd" type="Script" id=11]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Ads"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect2:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 0, 0, 0, 0 ),
+"update": 0,
+"values": [ Vector2( -26.6775, -56.1067 ), Vector2( -53.1775, -25.1067 ), Vector2( -71.6775, -51.1067 ), Vector2( -26.6775, -56.1067 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 0, 0, 0, 0 ),
+"update": 0,
+"values": [ Vector2( -145.791, -53.8448 ), Vector2( -155.791, -10.3448 ), Vector2( -35.2906, -18.0948 ), Vector2( -152.291, -42.8448 ) ]
+}
 
 [node name="Computer" type="Sprite"]
 position = Vector2( 325.276, 189.514 )
 texture = ExtResource( 2 )
+script = ExtResource( 7 )
 
 [node name="DesktopScreen" parent="." instance=ExtResource( 1 )]
-show_behind_parent = true
 margin_left = -14.6101
 margin_top = 27.2252
 margin_right = -654.61
 margin_bottom = -332.774
 
 [node name="BalanceScreen" parent="." instance=ExtResource( 3 )]
-show_behind_parent = true
 anchor_left = 0.749
 anchor_top = 0.624
 anchor_right = 0.918
 anchor_bottom = 0.884
-margin_left = -320.122
-margin_top = -145.289
-margin_right = -320.282
-margin_bottom = -179.889
+margin_left = -325.772
+margin_top = -140.829
+margin_right = -325.932
+margin_bottom = -175.429
 
 [node name="BillsScreen" parent="." instance=ExtResource( 4 )]
-show_behind_parent = true
-margin_left = -288.347
-margin_top = -64.1063
-margin_right = -815.347
-margin_bottom = -360.106
+margin_left = -293.847
+margin_top = -57.6063
+margin_right = -820.847
+margin_bottom = -353.606
 
 [node name="EventScreen" parent="." instance=ExtResource( 5 )]
-margin_left = 13.5402
-margin_top = 63.565
-margin_right = 13.5402
-margin_bottom = 63.565
+visible = false
+margin_left = -1.26404
+margin_top = 64.0
+margin_right = -539.264
+margin_bottom = -256.0
 
-[node name="CalenderScreen" type="Control" parent="."]
-show_behind_parent = true
-margin_left = -176.0
-margin_top = -146.0
-margin_right = -87.0
-margin_bottom = -83.0
+[node name="CalenderScreen" parent="." instance=ExtResource( 6 )]
+show_behind_parent = false
+
+[node name="SummaryPanel" parent="." instance=ExtResource( 8 )]
+visible = false
+margin_top = -107.984
+margin_bottom = 58.0163
+color = Color( 0.372549, 0.411765, 0.423529, 0.976471 )
+
+[node name="DisasterScreen" parent="." instance=ExtResource( 9 )]
+margin_left = 123.226
+margin_top = -127.308
+margin_right = 152.226
+margin_bottom = -101.308
+disasters = {
+"Ads": 2500.0,
+"MonitorBroke": 3000.0,
+"PowerOutage": 2000.0
+}
+
+[node name="AdsScreen" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Time" type="Panel" parent="CalenderScreen"]
-margin_left = 0.374573
-margin_top = 1.72545
-margin_right = 89.3746
-margin_bottom = 61.7255
+[node name="TextureRect" type="TextureRect" parent="AdsScreen"]
+modulate = Color( 0.847059, 0.847059, 0.847059, 1 )
+margin_left = -145.791
+margin_top = -53.8448
+margin_right = -1.79059
+margin_bottom = 74.1552
+texture = ExtResource( 10 )
+
+[node name="TextureRect2" type="TextureRect" parent="AdsScreen"]
+margin_left = -26.6775
+margin_top = -56.1067
+margin_right = 117.323
+margin_bottom = 71.8933
+texture = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Day" type="Panel" parent="CalenderScreen"]
-margin_left = 2.0
-margin_top = -21.0
-margin_right = 47.0
-margin_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AdsScreen"]
+anims/Ads = SubResource( 1 )

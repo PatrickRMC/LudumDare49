@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/CalenderScreen.gd" type="Script" id=1]
+
+[node name="CalenderScreen" type="Control"]
+show_behind_parent = true
+margin_left = -176.0
+margin_top = -146.0
+margin_right = -87.0
+margin_bottom = -83.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Time" type="Panel" parent="."]
+margin_left = 0.374573
+margin_top = 1.72545
+margin_right = 89.3746
+margin_bottom = 61.7255
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Day" type="Panel" parent="."]
+margin_left = 2.0
+margin_top = -21.0
+margin_right = 47.0
+margin_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DayTimer" type="Timer" parent="."]
+wait_time = 60.0
+
+[node name="EventTimer" type="Timer" parent="."]
+wait_time = 15.0
+
+[connection signal="timeout" from="EventTimer" to="." method="_on_EventTimer_timeout"]

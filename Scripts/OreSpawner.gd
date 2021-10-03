@@ -5,7 +5,7 @@ export(Texture) var cryptotext
 var h_range = 8
 var v_range = 5
 
-var amount_of_crypto = 5
+var amount_of_crypto = 2
 var ores = []
 var crypto_ores = []
 var is_active = false

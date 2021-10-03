@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/OreSpawner.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/CryptoMiner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Art/cryptologo.png" type="Texture" id=4]
-[ext_resource path="res://Art/cryptoorecrypto.png" type="Texture" id=5]
+[ext_resource path="res://Art/cryptoore.png" type="Texture" id=5]
 
 [node name="Game" type="Sprite"]
 position = Vector2( 96.3258, 64.2172 )

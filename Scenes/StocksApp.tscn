@@ -21,15 +21,22 @@ __meta__ = {
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="StocksPanel" index="0"]
-margin_right = 164.0
-margin_bottom = 125.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 6.0
+margin_right = -22.0
+margin_bottom = -3.0
+grow_horizontal = 0
+grow_vertical = 0
+scroll_horizontal_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="GridContainer" parent="StocksPanel/ScrollContainer" index="0"]
 margin_right = 76.0
-margin_bottom = 200.0
+margin_bottom = 300.0
 custom_constants/vseparation = 100
 custom_constants/hseparation = 76
 columns = 2
@@ -62,9 +69,19 @@ margin_top = 100.0
 margin_right = 76.0
 margin_bottom = 100.0
 
-[node name="PearStockCard" parent="StocksPanel/ScrollContainer/VBoxContainer" index="4" instance=ExtResource( 5 )]
+[node name="PearStockCard2" parent="StocksPanel/ScrollContainer/VBoxContainer" index="4" instance=ExtResource( 5 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 200.0
 margin_right = 0.0
 margin_bottom = 200.0
+
+[node name="Control" type="Control" parent="StocksPanel/ScrollContainer/VBoxContainer" index="5"]
+margin_left = 76.0
+margin_top = 200.0
+margin_right = 76.0
+margin_bottom = 200.0
+
+[node name="Control2" type="Control" parent="StocksPanel/ScrollContainer/VBoxContainer" index="6"]
+margin_top = 300.0
+margin_bottom = 300.0

@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/MainFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Art/playbuttonselected.png" type="Texture" id=2]
+[ext_resource path="res://Art/quitbuttonhover.png" type="Texture" id=3]
+[ext_resource path="res://Art/quitbutton.png" type="Texture" id=4]
+
+[node name="YouLost" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 2.0
+margin_top = 66.0
+margin_right = 215.0
+margin_bottom = 74.0
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = ExtResource( 1 )
+text = "You are poor now"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 11.0
+margin_top = 111.0
+margin_right = 320.0
+margin_bottom = 174.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = ExtResource( 1 )
+text = "Thank you for playing this
+Making this game has made me realize that the true implementation of the \"Unstable\" theme is how unstable my mental health is working on fixing this game.
+
+Good job, you can leave now."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 268.761
+margin_top = 265.193
+margin_right = 364.761
+margin_bottom = 329.193
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 3 )

@@ -14,3 +14,9 @@ func _buy_crypto():
 
 func _process(delta):
 	$CryptoWorthLabel.text = "Crypto Worth: " + str(Globals.crypto_worth)
+
+
+func _on_Timer_timeout():
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	Globals.crypto_worth = stepify(rand_range(1000, 10000), 0.5)
